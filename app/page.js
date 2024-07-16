@@ -4,10 +4,13 @@ import Navbar from "@/components/Navbar";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import Loader from "@/components/Loader";
-import Island from "@/models/Island";
+// import Island from "@/models/Island";
 import Sky from "@/models/Sky";
 import Plane from "@/models/Plane";
 import Bird from "@/models/Bird";
+import FantasyIsland from "@/models/Fantasy";
+import Balloon from "@/models/Balloon";
+import HoldInfo from "@/components/HoldInfo";
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
@@ -15,7 +18,7 @@ export default function Home() {
 
   const adjustIslandScreenSize = () => {
     let screenScale = null;
-    let screenPosition = [0, -6.5, -30];
+    let screenPosition = [0, -18.5, -90];
     let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
@@ -52,9 +55,9 @@ export default function Home() {
     <main className="bg-slate-300/20">
       <Navbar />
       <section className="w-full h-screen relative">
-        {/* <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-          POPUP
-        </div> */}
+        <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+          {currentStage && <HoldInfo currentStage={currentStage} />}
+        </div>
         <Canvas
           className={`w-full h-screen bg-transparent ${
             isRotating ? "cursor-grabbing" : "cursor-grab"
@@ -74,13 +77,11 @@ export default function Home() {
             />
             <Sky isRotating={isRotating} />
             <Bird />
-            <Plane
-              isRotating={isRotating}
-              position={planePosition}
-              scale={planeScale}
-              rotation={[0, Math.PI * 0.5, 0]}
+            <Balloon
+              islandRotation={islandRotation}
+              setIsRotating={setIsRotating}
             />
-            <Island
+            <FantasyIsland
               position={isLandPosition}
               scale={islandScale}
               rotation={islandRotation}
@@ -88,6 +89,20 @@ export default function Home() {
               setCurrentStage={setCurrentStage}
               setIsRotating={setIsRotating}
             />
+            <Plane
+              isRotating={isRotating}
+              position={planePosition}
+              scale={planeScale}
+              rotation={[0, Math.PI * 0.5, 0]}
+            />
+            {/* <Island
+              position={isLandPosition}
+              scale={islandScale}
+              rotation={islandRotation}
+              isRotating={isRotating}
+              setCurrentStage={setCurrentStage}
+              setIsRotating={setIsRotating}
+            /> */}
           </Suspense>
         </Canvas>
       </section>
