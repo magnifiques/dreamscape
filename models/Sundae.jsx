@@ -1,12 +1,10 @@
-"use client";
-
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
-import Loader from "@/components/Loader";
-import { Fox } from "@/models/Fox";
-// import Sundae from "@/models/Sundae";
-import Alert from "@/components/Alert";
+
+import { Fox } from "../models";
+import useAlert from "../hooks/useAlert";
+import { Alert, Loader } from "../components";
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,16 +27,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Arpit Vaghela",
+          to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: process.env.NEXT_PUBLIC_TO_EMAIL,
+          to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_API_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
