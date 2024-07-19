@@ -1,8 +1,7 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "@/components/Loader";
 // import Island from "@/models/Island";
 import Sky from "@/models/Sky";
@@ -11,10 +10,25 @@ import Bird from "@/models/Bird";
 import FantasyIsland from "@/models/Fantasy";
 import Balloon from "@/models/Balloon";
 import HoldInfo from "@/components/HoldInfo";
+import Image from "next/image";
+import { soundoff, soundon } from "@/assets/icons";
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
+  // const audioRef = useRef(new Audio("../assets/sakura.mp3"));
+  // audioRef.current.volume = 0.4;
+  // audioRef.current.loop = true;
   const [currentStage, setCurrentStage] = useState(1);
+  // const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  // useEffect(() => {
+  //   if (isPlayingMusic) {
+  //     audioRef.current.play();
+  //   }
+  //   return () => {
+  //     audioRef.current.pause();
+  //   };
+  // }, [isPlayingMusic]);
 
   const adjustIslandScreenSize = () => {
     let screenScale = null;
@@ -43,7 +57,7 @@ export default function Home() {
       screenPosition = [0, -1.5, 0];
     } else {
       screenScale = [1, 1, 1];
-      screenPosition = [0, -2, -1];
+      screenPosition = [0, 0, 1.6];
     }
 
     return [screenPosition, screenScale];
@@ -52,8 +66,7 @@ export default function Home() {
   const [planePosition, planeScale] = adjustPlaneScreenSize();
 
   return (
-    <main className="bg-slate-300/20">
-      <Navbar />
+    <main className="bg-slate-300/20 h-[100vh]">
       <section className="w-full h-screen relative">
         <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
           {currentStage && <HoldInfo currentStage={currentStage} />}
@@ -105,6 +118,14 @@ export default function Home() {
             /> */}
           </Suspense>
         </Canvas>
+        {/* <div className="absolute bottom-2 left-2">
+          <Image
+            src={!isPlayingMusic ? soundoff : soundon}
+            alt="sound"
+            className="w-10 h-10 cursor-pointer object-contain"
+            onClick={() => setIsPlayingMusic((prev) => (prev = !prev))}
+          />
+        </div> */}
       </section>
     </main>
   );
