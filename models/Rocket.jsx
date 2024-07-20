@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
-import rocketScene from "../assets/Rocket.glb";
+import rocketScene from "../assets/rocket.glb";
 
 export default function Rocket() {
   const rocketRef = useRef();
