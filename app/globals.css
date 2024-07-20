@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,7 +33,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+    @apply text-2xl bg-gradient-to-r from-[#430A5D] to-[#6420AA] bg-clip-text text-transparent;
   }
 
   .input {
@@ -62,7 +61,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-6 pb-12 px-10;
   }
 
   .neo-btn {
@@ -166,12 +165,12 @@ body:has(.card[data-color="green"]:hover) {
 
 /* Neo Brutalism */
 .neo-brutalism-blue {
-  background: #2b77e7;
+  background: #26355d;
   position: relative;
   border-radius: 10px;
-  border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  border: #26355d;
+  box-shadow: 0.6vmin 0.6vmin #5c2fc2, 1vmin 1vmin #5c2fc2, 1vmin 1vmin #5c2fc2,
+    0.65vmin 1vmin #5c2fc2, 1vmin 0.65vmin #5c2fc2;
 }
 
 .neo-brutalism-white {

@@ -17,7 +17,7 @@ export default function Balloon() {
   // Define the radius of the orbit
   const radius = 10;
   // Define the speed of rotation (radians per second)
-  const speed = 0.5;
+  const speed = 0.2;
 
   useFrame((state, delta) => {
     const elapsedTime = state.clock.getElapsedTime();

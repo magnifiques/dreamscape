@@ -1,5 +1,4 @@
 "use client";
-
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "@/components/Loader";
@@ -10,15 +9,18 @@ import Bird from "@/models/Bird";
 import FantasyIsland from "@/models/Fantasy";
 import Balloon from "@/models/Balloon";
 import HoldInfo from "@/components/HoldInfo";
-import Image from "next/image";
-import { soundoff, soundon } from "@/assets/icons";
+import Navbar from "@/components/Navbar";
+import Balloon2 from "@/models/Balloon2";
+import Balloon3 from "@/models/Balloon3";
+import Rocket from "@/models/Rocket";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
   // const audioRef = useRef(new Audio("../assets/sakura.mp3"));
   // audioRef.current.volume = 0.4;
   // audioRef.current.loop = true;
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(0.5);
   // const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   // useEffect(() => {
@@ -65,50 +67,67 @@ export default function Home() {
 
   const [planePosition, planeScale] = adjustPlaneScreenSize();
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="bg-slate-300/20 h-[100vh]">
-      <section className="w-full h-screen relative">
-        <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-          {currentStage && <HoldInfo currentStage={currentStage} />}
-        </div>
-        <Canvas
-          className={`w-full h-screen bg-transparent ${
-            isRotating ? "cursor-grabbing" : "cursor-grab"
-          }`}
-          camera={{
-            near: 0.1,
-            far: 1000,
-          }}
-        >
-          <Suspense fallback={<Loader />}>
-            <directionalLight position={[1, 1, 1]} intensity={2} />
-            <ambientLight intensity={0.5} />
-            <hemisphereLight
-              skyColor="#b1e1ff"
-              groundColor="#000000"
-              intensity={1}
-            />
-            <Sky isRotating={isRotating} />
-            <Bird />
-            <Balloon
-              islandRotation={islandRotation}
-              setIsRotating={setIsRotating}
-            />
-            <FantasyIsland
-              position={isLandPosition}
-              scale={islandScale}
-              rotation={islandRotation}
-              isRotating={isRotating}
-              setCurrentStage={setCurrentStage}
-              setIsRotating={setIsRotating}
-            />
-            <Plane
-              isRotating={isRotating}
-              position={planePosition}
-              scale={planeScale}
-              rotation={[0, Math.PI * 0.5, 0]}
-            />
-            {/* <Island
+    <>
+      <ToastContainer />
+      <main className="bg-slate-300/20 h-[100vh]">
+        {!isLoading && <Navbar />}
+
+        <section className="w-full h-screen relative">
+          <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+            {currentStage && <HoldInfo currentStage={currentStage} />}
+          </div>
+          <Canvas
+            className={`w-full h-screen bg-transparent ${
+              isRotating ? "cursor-grabbing" : "cursor-grab"
+            }`}
+            camera={{
+              near: 0.1,
+              far: 1000,
+            }}
+          >
+            <Suspense fallback={<Loader />}>
+              <directionalLight position={[1, 1, 1]} intensity={2} />
+              <ambientLight intensity={0.5} />
+              <hemisphereLight
+                skyColor="#b1e1ff"
+                groundColor="#000000"
+                intensity={1}
+              />
+              <Sky isRotating={isRotating} />
+              <Bird />
+              <Balloon
+                islandRotation={islandRotation}
+                setIsRotating={setIsRotating}
+              />
+              <Balloon2 />
+              <Balloon3 />
+              <Rocket />
+              <FantasyIsland
+                position={isLandPosition}
+                scale={islandScale}
+                rotation={islandRotation}
+                isRotating={isRotating}
+                setCurrentStage={setCurrentStage}
+                setIsRotating={setIsRotating}
+              />
+              <Plane
+                isRotating={isRotating}
+                position={planePosition}
+                scale={planeScale}
+                rotation={[0, Math.PI * 0.5, 0]}
+              />
+              {/* <Island
               position={isLandPosition}
               scale={islandScale}
               rotation={islandRotation}
@@ -116,9 +135,9 @@ export default function Home() {
               setCurrentStage={setCurrentStage}
               setIsRotating={setIsRotating}
             /> */}
-          </Suspense>
-        </Canvas>
-        {/* <div className="absolute bottom-2 left-2">
+            </Suspense>
+          </Canvas>
+          {/* <div className="absolute bottom-2 left-2">
           <Image
             src={!isPlayingMusic ? soundoff : soundon}
             alt="sound"
@@ -126,7 +145,8 @@ export default function Home() {
             onClick={() => setIsPlayingMusic((prev) => (prev = !prev))}
           />
         </div> */}
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

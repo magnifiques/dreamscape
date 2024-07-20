@@ -2,6 +2,8 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 const worksans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,7 +14,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Navbar />
       <body className={worksans.className}>{children}</body>
     </html>
   );
