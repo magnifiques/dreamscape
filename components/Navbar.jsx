@@ -33,7 +33,6 @@ const Navbar = () => {
       <nav className="flex text-lg gap-7 font-medium">
         {links.map((link, index) => {
           const isLinkActive = pathName.startsWith(link.href);
-          console.log(isLinkActive);
           return (
             <Link
               key={link.name}

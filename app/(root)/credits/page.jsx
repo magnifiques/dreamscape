@@ -49,51 +49,61 @@ export default function Credits() {
       license: "Creative Commons Attribution",
       licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
     },
+    {
+      name: "Favicon Icon",
+      url: "https://www.flaticon.com/free-icons/balloon",
+      author: "Amonrat Rungreangfangsai",
+      license: "Creative Commons Attribution",
+      licenseUrl: "http://creativecommons.org/licenses/by/4.0/",
+    },
   ];
 
   return (
-    <section className="max-container h-fit">
-      <section className="w-full h-screen p-8">
-        <h1 className="text-3xl font-bold mb-6">Credits</h1>
-        <div className="space-y-4">
-          {models.map((model, index) => (
-            <div key={index} className="bg-white p-4 rounded shadow">
-              <p className="text-lg font-semibold">
-                <a
-                  href={model.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500"
-                >
-                  {model.name}
-                </a>
-              </p>
-              <p>
-                by{" "}
-                <a
-                  href={model.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500"
-                >
-                  {model.author}
-                </a>
-              </p>
-              <p>
-                is licensed under{" "}
-                <a
-                  href={model.licenseUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500"
-                >
-                  {model.license}
-                </a>
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <section className="max-container">
+      <h1 className="text-3xl font-bold mb-6">Credits</h1>
+      <h2 className="text-lg font-bold mb-6">
+        I would like to extend my heartfelt thanks to the amazing Sketchfab
+        community for providing these incredible 3D models. Your creativity and
+        generosity make projects like this possible!
+      </h2>
+      <div className="space-y-4">
+        {models.map((model, index) => (
+          <div key={index} className="bg-white p-4 rounded shadow">
+            <p className="text-lg font-semibold">
+              <a
+                href={model.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500"
+              >
+                {model.name}
+              </a>
+            </p>
+            <p>
+              by{" "}
+              <a
+                href={model.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500"
+              >
+                {model.author}
+              </a>
+            </p>
+            <p>
+              is licensed under{" "}
+              <a
+                href={model.licenseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500"
+              >
+                {model.license}
+              </a>
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
