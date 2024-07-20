@@ -1,8 +1,8 @@
 "use client";
+import "react-toastify/dist/ReactToastify.css";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import Loader from "@/components/Loader";
-// import Island from "@/models/Island";
 import Sky from "@/models/Sky";
 import Plane from "@/models/Plane";
 import Bird from "@/models/Bird";
@@ -17,30 +17,15 @@ import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
-  // const audioRef = useRef(new Audio("../assets/sakura.mp3"));
-  // audioRef.current.volume = 0.4;
-  // audioRef.current.loop = true;
   const [currentStage, setCurrentStage] = useState(0.5);
-  // const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-
-  // useEffect(() => {
-  //   if (isPlayingMusic) {
-  //     audioRef.current.play();
-  //   }
-  //   return () => {
-  //     audioRef.current.pause();
-  //   };
-  // }, [isPlayingMusic]);
 
   const adjustIslandScreenSize = () => {
-    let screenScale = null;
+    let screenScale = [1, 1, 1];
     let screenPosition = [0, -18.5, -90];
     let rotation = [0.1, 4.7, 0];
 
-    if (window.innerWidth < 768) {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       screenScale = [0.9, 0.9, 0.9];
-    } else {
-      screenScale = [1, 1, 1];
     }
 
     return [screenPosition, screenScale, rotation];
@@ -50,16 +35,12 @@ export default function Home() {
     adjustIslandScreenSize();
 
   const adjustPlaneScreenSize = () => {
-    let screenScale = null;
-    let screenPosition = null;
-    // let rotation = [0.1, 4.7, 0];
+    let screenScale = [1, 1, 1];
+    let screenPosition = [0, 0, 1.6];
 
-    if (window.innerWidth < 768) {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, 0, 1.6];
     }
 
     return [screenPosition, screenScale];
@@ -127,24 +108,8 @@ export default function Home() {
                 scale={planeScale}
                 rotation={[0, Math.PI * 0.5, 0]}
               />
-              {/* <Island
-              position={isLandPosition}
-              scale={islandScale}
-              rotation={islandRotation}
-              isRotating={isRotating}
-              setCurrentStage={setCurrentStage}
-              setIsRotating={setIsRotating}
-            /> */}
             </Suspense>
           </Canvas>
-          {/* <div className="absolute bottom-2 left-2">
-          <Image
-            src={!isPlayingMusic ? soundoff : soundon}
-            alt="sound"
-            className="w-10 h-10 cursor-pointer object-contain"
-            onClick={() => setIsPlayingMusic((prev) => (prev = !prev))}
-          />
-        </div> */}
         </section>
       </main>
     </>
