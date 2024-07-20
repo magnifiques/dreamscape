@@ -37,7 +37,9 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className={isLinkActive ? "text-blue-600" : "text-black-500"}
+              className={`hover:text-pink-600 ${
+                isLinkActive ? "text-blue-600" : "text-black-500"
+              }`}
             >
               {link.name}
             </Link>

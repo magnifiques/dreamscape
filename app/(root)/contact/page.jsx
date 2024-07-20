@@ -4,9 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
-import Loader from "@/components/Loader";
 // import { Fox } from "@/models/Fox";
 import Oreo from "@/models/Oreo";
+import LoaderModel from "@/components/LoadingModel";
 
 const Contact = () => {
   const formRef = useRef();
@@ -189,7 +189,7 @@ const Contact = () => {
               intensity={1}
             />
 
-            <Suspense fallback={<Loader />}>
+            <Suspense fallback={<LoaderModel />}>
               {/* <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}

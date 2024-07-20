@@ -60,7 +60,6 @@ export default function Home() {
 
   return (
     <>
-      <ToastContainer />
       <main className="bg-slate-300/20 h-[100vh]">
         {!isLoading && <Navbar />}
 
@@ -77,7 +76,7 @@ export default function Home() {
               far: 1000,
             }}
           >
-            <Suspense fallback={<Loader />}>
+            <Suspense fallback={<Loader isLoading={isLoading} />}>
               <directionalLight position={[1, 1, 1]} intensity={2} />
               <ambientLight intensity={0.5} />
               <hemisphereLight
