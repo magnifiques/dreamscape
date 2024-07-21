@@ -15,7 +15,7 @@ const page = () => {
         </span>
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p className="">
+        <p className=" text-lg">
           I&apos;ve designed and created numerous projects throughout these
           years, but these are the ones that I hold closest to my heart. Many of
           these projects are available as a public repository on my GitHub, so
@@ -43,7 +43,11 @@ const page = () => {
               <h4 className="text-2xl font-poppins font-semibold">
                 {project.name}
               </h4>
-              <p className="mt-2 text-slate-500">{project.description}</p>
+              <p className="mt-2 text-slate-500">
+                {project.description.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </p>
               <div className="mt-5 flex flex-row justify-between items-center gap-2 font-poppins">
                 <Link
                   href={project.website_link}

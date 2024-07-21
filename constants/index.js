@@ -308,8 +308,8 @@ export const projects = [
 
   {
     name: "Blog Stash",
-    description:
-      "The Blog Stash is a website where you can check, read and even EDIT the blogs on the go! Powered with Next JS 13 and Tiptap, The Blog Stash is the next step to read and write web articles on the internet.",
+    description: `- The Blog Stash is a website where you can check, read and even EDIT the blogs on the go! Powered with Next JS 13 and Tiptap, 
+      \n- The Blog Stash is the next step to read and write web articles on the internet.`,
     theme: "btn-back-blue",
     image: blogStash,
     source_code_link: "https://github.com/magnifiques/blog-stash",
@@ -317,7 +317,8 @@ export const projects = [
   },
   {
     name: "Quest",
-    description: `Quest is a finance management dashboard web application built using Next.js 14! This robust platform connects multiple bank accounts, displays real-time transactions, and allows seamless fund transfers between users. 
+    description: `- Quest is a finance management dashboard web application built using Next.js 14! 
+  \n- This robust platform connects multiple bank accounts, displays real-time transactions, and allows seamless fund transfers between users. 
 `,
     theme: "btn-back-red",
     image: quest,
@@ -328,6 +329,7 @@ export const projects = [
     name: "Bloom",
     image: bloom,
     description: `- Bloom is an interactive virtual meeting creator where you can seamlessly create, join, and manage meetings, all in one place.
+    
     \n- Implemented video conference features using Stream, Stream is a game-changer in the realm of virtual communication, revolutionizing the way we experience video calls and livestreams.`,
     source_code_link: "https://github.com/magnifiques/bloom",
     website_link: "https://bloom-meetings.vercel.app/",
@@ -346,11 +348,11 @@ export const projects = [
   {
     name: "Netflex",
     image: netflex,
-    description: `-Designed utilizing frameworks such as ReactJS, Styled-Components, Font-Awesome, And Fuse.js for Frontend.
+    description: `- Designed utilizing frameworks such as ReactJS, Styled-Components, Font-Awesome, And Fuse.js for Frontend.
     
-    \n-Firebase takes center stage on the backend, serving dual purposes: storing comprehensive information about movies and TV shows and seamlessly managing the Sign-In and Sign-Up features.
+    \n- Firebase takes center stage on the backend, serving dual purposes: storing comprehensive information about movies and TV shows and seamlessly managing the Sign-In and Sign-Up features.
     
-    \n-For logo and UI/UX design, adobe XD and Photoshop are used.`,
+    \n- For logo and UI/UX design, adobe XD and Photoshop are used.`,
     source_code_link: "https://github.com/magnifiques/netflex",
     website_link: "https://thenetflexapp.vercel.app/",
     theme: "btn-back-orange",
