@@ -30,7 +30,7 @@ const Navbar = () => {
       name: "Credits",
     },
     {
-      href: "https://drive.google.com/file/d/1XKQrkflthkcRUkg0tkeNmtCBEQKrzl4L/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1oGNOlObr1A2L9uaM5LyJDw-svO9YJg7G/view?usp=sharing",
       name: "Resume",
       target: true,
     },
