@@ -25,6 +25,7 @@ import {
   mui,
   nextjs,
   nodejs,
+  native,
   pricewise,
   react,
   redux,
@@ -46,6 +47,7 @@ import {
   codechef,
   web,
   engamb,
+  aws,
 } from "../assets/icons";
 
 export const skills = [
@@ -77,6 +79,11 @@ export const skills = [
   {
     imageUrl: threejs,
     name: "Three.js",
+    type: "Frontend",
+  },
+  {
+    imageUrl: native,
+    name: "React Native",
     type: "Frontend",
   },
   {
@@ -145,6 +152,11 @@ export const skills = [
     imageUrl: tailwindcss,
     name: "Tailwind CSS",
     type: "Frontend",
+  },
+  {
+    imageUrl: aws,
+    name: "Amazon Web Services",
+    type: "Tools",
   },
   {
     imageUrl: typescript,

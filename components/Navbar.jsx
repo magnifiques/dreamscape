@@ -29,6 +29,11 @@ const Navbar = () => {
       href: "/credits",
       name: "Credits",
     },
+    {
+      href: "https://drive.google.com/file/d/1XKQrkflthkcRUkg0tkeNmtCBEQKrzl4L/view?usp=sharing",
+      name: "Resume",
+      target: true,
+    },
   ];
   return (
     <header className="header">
@@ -42,6 +47,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
+              target={link.target && "_blank"}
               className={`hover:text-pink-600 ${
                 isLinkActive ? "text-blue-600" : "text-black-500"
               }`}
@@ -51,9 +57,9 @@ const Navbar = () => {
           );
         })}
       </nav>
-      <div className="md:hidden relative">
+      <div className="md:hidden relative ">
         <button
-          className="text-black-500 focus:outline-none"
+          className="text-black-500 focus:outline-none z-11"
           onClick={handleMenuToggle}
         >
           {/* Hamburger icon */}
@@ -64,7 +70,7 @@ const Navbar = () => {
           </div>
         </button>
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+          <div className="absolute right-0 mt-2 w-48 z-11 bg-white shadow-lg rounded-md">
             {links.map((link) => (
               <Link
                 key={link.name}

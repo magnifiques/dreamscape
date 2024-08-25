@@ -39,8 +39,10 @@ import gdsc from "./gdsc.svg";
 import codechef from "./codechef.png";
 import web from "./web.png";
 import engamb from "./engamb.svg";
-
+import native from "./native.png";
+import aws from "./aws.png";
 export {
+  aws,
   engamb,
   web,
   gdsc,
@@ -81,5 +83,6 @@ export {
   soundon,
   threejs,
   vuejs,
+  native,
   soundoff,
 };
