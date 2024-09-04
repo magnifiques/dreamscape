@@ -40,7 +40,7 @@ const Navbar = () => {
       <Link href="/" className="bg-white px-3 py-2 rounded-md shadow-xl">
         <p className="blue-gradient_text">AV</p>
       </Link>
-      <nav className="hidden md:flex text-lg gap-7 font-medium">
+      <nav className="hidden md:pl-[32rem] md:flex text-lg gap-7 font-medium">
         {links.map((link, index) => {
           const isLinkActive = pathName.startsWith(link.href);
           return (
