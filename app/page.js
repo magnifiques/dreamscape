@@ -13,11 +13,10 @@ import Navbar from "@/components/Navbar";
 import Balloon2 from "@/models/Balloon2";
 import Balloon3 from "@/models/Balloon3";
 import Rocket from "@/models/Rocket";
-import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(0.5);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIslandScreenSize = () => {
     let screenScale = [1, 1, 1];

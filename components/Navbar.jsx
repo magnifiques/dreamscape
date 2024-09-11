@@ -14,21 +14,18 @@ const Navbar = () => {
   };
   const links = [
     {
-      href: "/about",
-      name: "About",
-    },
-    {
       href: "/projects",
       name: "Projects",
+    },
+    {
+      href: "/about",
+      name: "About",
     },
     {
       href: "/contact",
       name: "Contact",
     },
-    {
-      href: "/credits",
-      name: "Credits",
-    },
+
     {
       href: "https://drive.google.com/file/d/1oGNOlObr1A2L9uaM5LyJDw-svO9YJg7G/view?usp=sharing",
       name: "Resume",

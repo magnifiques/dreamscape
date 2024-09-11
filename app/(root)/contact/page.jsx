@@ -161,11 +161,11 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="btn"
+              className="btn-brown"
               onFocus={handleFocus}
               onBlur={handleBlur}
             >
-              {loading ? "Sending..." : "Submit"}
+              {loading ? "Sending..." : `Let's Connect! 🚀`}
             </button>
           </form>
         </div>
