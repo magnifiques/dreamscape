@@ -27,14 +27,14 @@ const renderContent = {
   ),
   2: (
     <InfoBox
-      text="I create Web Applications and design machine learning models."
+      text="I create Web Applications and research in machine learning field"
       link="/about"
       btnText="Learn More"
     />
   ),
   3: (
     <InfoBox
-      text="Created numerous full stack web applications using different tech stacks."
+      text="I've built numerous full stack web applications using different tech stacks. On top of that, I design deep learning models using PyTorch Library"
       link="/projects"
       btnText="Visit my Portfolio"
     />

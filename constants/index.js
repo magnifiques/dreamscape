@@ -10,6 +10,7 @@ import {
   galaxy,
 } from "@/assets/images/projects";
 import {
+  mlearning,
   car,
   contact,
   css,
@@ -48,6 +49,7 @@ import {
   web,
   engamb,
   aws,
+  webdev,
 } from "../assets/icons";
 
 export const skills = [
@@ -384,6 +386,31 @@ export const projects = [
     source_code_link: "https://github.com/magnifiques/galaxy-in-three-js",
     website_link: "https://the-galaxy-generator.netlify.app/",
     theme: "btn-back-green",
+  },
+];
+
+export const mlprojects = [
+  {
+    name: "Foodvision",
+    description: `- Built a food classification model using PyTorch and the Vision Transformer (ViT) architecture, utilizing PyTorch’s
+torchvision library for transfer learning with pre-trained weights. The model was trained for 20 epochs, achieving an overall accuracy of 86.32%, with 20 food categories from the Food101 dataset.
+    \n - To improve the model’s generalization and prevent overfitting, Applied data augmentation (flipping, rotating images) and used a learning rate scheduler to adjust the learning rate over time. Early stopping was also implemented to avoid over-training the model.
+    \n - Deployed the model using Gradio on Hugging Face Spaces, allowing live testing and interaction with the extended classification model, making it accessible for anyone to try.`,
+    theme: "btn-back-pink",
+    // image: FoodVision,
+    source_code_link:
+      "https://huggingface.co/spaces/vapit/foodvision_extended/tree/main",
+    website_link: "https://huggingface.co/spaces/vapit/foodvision_extended",
+  },
+  {
+    name: "CIFARVision",
+    description: `- Used the CIFAR-10 dataset with 10 image categories to create an image classifier with the Vision Transformer (ViT) model. Started with pre-trained weights from PyTorch’s torchvision library.
+    \n - Trained the model for 25 epochs, achieving an accuracy of 80.94% on the test set, thanks to fine-tuning and optimization for CIFAR-10's image size and unique characteristics.
+    \n - Deployed the model on Hugging Face Spaces with Gradio, allowing users to try it out by uploading images and seeing the predictions.`,
+    theme: "btn-back-green",
+    // image: FoodVision,
+    source_code_link: "https://huggingface.co/spaces/vapit/cifar10/tree/main",
+    website_link: "https://huggingface.co/spaces/vapit/cifar10",
   },
 ];
 //   // {

@@ -2,6 +2,7 @@ import { arrow } from "@/assets/icons";
 import Cta from "@/components/Cta";
 import { projects } from "@/constants";
 import Image from "next/image";
+import { webdev, mlearning } from "@/assets/icons";
 import Link from "next/link";
 import React from "react";
 
@@ -25,50 +26,34 @@ const page = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center my-20 gap-16">
-        {projects.map((project) => (
-          <div className="lg:w-[400px] w-full" key={project.name}>
-            <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl ${project.theme}`} />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                {/* <Image
-                  src={project.iconUrl}
-                  alt="threads"
-                  className="w-1/2 h-1/2 object-contain"
-                /> */}
-              </div>
-            </div>
-
-            <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">
-                {project.name}
-              </h4>
-              <p className="mt-2 text-slate-500">
-                {project.description.split("\n").map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </p>
-              <div className="mt-5 flex flex-row justify-between items-center gap-2 font-poppins">
-                <Link
-                  href={project.website_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
-                >
-                  Live Link
-                </Link>
-                <Link
-                  href={project.source_code_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
-                >
-                  GitHub Repository
-                </Link>
-              </div>
-            </div>
+      <div className="flex flex-wrap justify-around items-center my-20 gap-16">
+        <Link href="/projects/web-development">
+          <div className="pt-6 pb-1 px-8 grid grid-rows-2 justify-items-center items-center border border-black rounded-md shadow-md hover:bg-slate-100">
+            <Image
+              className="text-center"
+              src={webdev}
+              alt="Web Development"
+              width={120}
+              height={120}
+            />
+            <p className="text-lg font-bold text-center">
+              Web Development Projects
+            </p>
           </div>
-        ))}
+        </Link>
+        <Link href="/projects/machine-learning">
+          <div className="pt-6 pb-1 px-8 grid grid-rows-2 justify-items-center items-center border border-black rounded-md shadow-md hover:bg-slate-100">
+            <Image
+              src={mlearning}
+              alt="Machine Learning"
+              width={120}
+              height={120}
+            />
+            <p className="text-lg font-bold text-center">
+              Machine Learning Projects
+            </p>
+          </div>
+        </Link>
       </div>
 
       <hr className="border-slate-200" />

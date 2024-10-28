@@ -41,7 +41,11 @@ import web from "./web.png";
 import engamb from "./engamb.svg";
 import native from "./native.png";
 import aws from "./aws.png";
+import webdev from "./webdev.png";
+import mlearning from "./ml.png";
 export {
+  webdev,
+  mlearning,
   aws,
   engamb,
   web,
