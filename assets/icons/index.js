@@ -43,7 +43,9 @@ import native from "./native.png";
 import aws from "./aws.png";
 import webdev from "./webdev.png";
 import mlearning from "./ml.png";
+import uofgr from "./uofgr.jpg";
 export {
+  uofgr,
   webdev,
   mlearning,
   aws,
