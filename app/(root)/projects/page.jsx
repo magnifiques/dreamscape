@@ -27,6 +27,20 @@ const page = () => {
       </div>
 
       <div className="flex flex-wrap justify-around items-center my-20 gap-16">
+        <Link href="/projects/machine-learning">
+          <div className="pt-6 pb-1 px-8 grid grid-rows-2 justify-items-center items-center border border-black rounded-md shadow-md hover:bg-slate-100">
+            <Image
+              src={mlearning}
+              alt="Machine Learning"
+              width={120}
+              height={120}
+            />
+            <p className="text-lg font-bold text-center">
+              Machine Learning Projects
+            </p>
+          </div>
+        </Link>
+
         <Link href="/projects/web-development">
           <div className="pt-6 pb-1 px-8 grid grid-rows-2 justify-items-center items-center border border-black rounded-md shadow-md hover:bg-slate-100">
             <Image
@@ -38,19 +52,6 @@ const page = () => {
             />
             <p className="text-lg font-bold text-center">
               Web Development Projects
-            </p>
-          </div>
-        </Link>
-        <Link href="/projects/machine-learning">
-          <div className="pt-6 pb-1 px-8 grid grid-rows-2 justify-items-center items-center border border-black rounded-md shadow-md hover:bg-slate-100">
-            <Image
-              src={mlearning}
-              alt="Machine Learning"
-              width={120}
-              height={120}
-            />
-            <p className="text-lg font-bold text-center">
-              Machine Learning Projects
             </p>
           </div>
         </Link>

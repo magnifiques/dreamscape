@@ -52,7 +52,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Adjust the timeout duration as needed
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -64,7 +64,9 @@ export default function Home() {
 
         <section className="w-full h-screen relative">
           <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-            {currentStage && <HoldInfo currentStage={currentStage} />}
+            {!isLoading && currentStage && (
+              <HoldInfo currentStage={currentStage} />
+            )}
           </div>
           <Canvas
             className={`w-full h-screen bg-transparent ${

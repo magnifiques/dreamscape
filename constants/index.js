@@ -415,16 +415,26 @@ torchvision library for transfer learning with pre-trained weights. The model wa
       "https://huggingface.co/spaces/vapit/foodvision_extended/tree/main",
     website_link: "https://huggingface.co/spaces/vapit/foodvision_extended",
   },
+
   {
-    name: "CIFARVision",
-    description: `- Used the CIFAR-10 dataset with 10 image categories to create an image classifier with the Vision Transformer (ViT) model. Started with pre-trained weights from PyTorch’s torchvision library.
-    \n - Trained the model for 25 epochs, achieving an accuracy of 80.94% on the test set, thanks to fine-tuning and optimization for CIFAR-10's image size and unique characteristics.
-    \n - Deployed the model on Hugging Face Spaces with Gradio, allowing users to try it out by uploading images and seeing the predictions.`,
-    theme: "btn-back-green",
+    name: "WhatToCookToday",
+    description: `- Created a smart recipe recommendation system using Retrieval-Augmented Generation (RAG) and semantic search to match user-input ingredients with 180K+ real-world recipes.
+
+    \n - Implemented dense vector search with SentenceTransformers and ChromaDB, enabling real-time, context-aware recipe suggestions without relying on keyword matching.
+
+    \n - Designed a fully CPU-compatible pipeline, optimizing for low-resource environments by avoiding model fine-tuning and using lightweight, pre-trained embeddings.
+    
+    \n - Preprocessed and normalized a large-scale recipe dataset (Food.com), handling data cleaning, formatting, and conversion into LangChain-compatible documents.
+
+    \n - Deployed an interactive cooking assistant UI on Hugging Face Spaces using Gradio, supporting natural language ingredient input and seamless user interaction.
+    `,
+    theme: "btn-back-red",
     // image: FoodVision,
-    source_code_link: "https://huggingface.co/spaces/vapit/cifar10/tree/main",
-    website_link: "https://huggingface.co/spaces/vapit/cifar10",
+    source_code_link:
+      "https://huggingface.co/spaces/vapit/whattocooktoday/tree/main",
+    website_link: "https://huggingface.co/spaces/vapit/whattocooktoday",
   },
+
   {
     name: "Dogvision",
     description: `- Developed a high-speed, lightweight dog breed classification model using PyTorch, trained on 120 unique dog
@@ -437,6 +447,7 @@ breeds from the Kaggle Dog Breed Identification dataset.
     source_code_link: "https://huggingface.co/spaces/vapit/DogVision/tree/main",
     website_link: "https://huggingface.co/spaces/vapit/DogVision",
   },
+
   {
     name: "Breemary",
     description: `- Fine-tuned Meta’s BART-Large-CNN model on a custom dataset of emails and conversational texts to generate high-quality, context-aware summaries, achieving a ROUGE-1 score of 57, ROUGE-2 score of 33, and ROUGE-L score of 48.
@@ -446,6 +457,17 @@ breeds from the Kaggle Dog Breed Identification dataset.
     theme: "btn-back-yellow",
     source_code_link: "https://huggingface.co/spaces/vapit/breemmary/tree/main",
     website_link: "https://huggingface.co/spaces/vapit/breemmary",
+  },
+
+  {
+    name: "CIFARVision",
+    description: `- Used the CIFAR-10 dataset with 10 image categories to create an image classifier with the Vision Transformer (ViT) model. Started with pre-trained weights from PyTorch’s torchvision library.
+    \n - Trained the model for 25 epochs, achieving an accuracy of 80.94% on the test set, thanks to fine-tuning and optimization for CIFAR-10's image size and unique characteristics.
+    \n - Deployed the model on Hugging Face Spaces with Gradio, allowing users to try it out by uploading images and seeing the predictions.`,
+    theme: "btn-back-green",
+    // image: FoodVision,
+    source_code_link: "https://huggingface.co/spaces/vapit/cifar10/tree/main",
+    website_link: "https://huggingface.co/spaces/vapit/cifar10",
   },
 ];
 //   // {

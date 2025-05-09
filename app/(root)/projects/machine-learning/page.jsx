@@ -6,7 +6,6 @@ import Link from "next/link";
 import React from "react";
 
 const page = () => {
-  console.log(mlprojects);
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -44,11 +43,7 @@ const page = () => {
               <h4 className="text-2xl font-poppins font-semibold">
                 {mlproject.name}
               </h4>
-              <p className="mt-2 h-[450px] overflow-hidden overflow-y-auto text-slate-500">
-                {mlproject.description.split("\n").map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </p>
+
               <div className="mt-5 flex flex-row justify-between items-center gap-2 font-poppins">
                 <Link
                   href={mlproject.website_link}
@@ -67,6 +62,11 @@ const page = () => {
                   GitHub Repository
                 </Link>
               </div>
+              <p className="mt-2   overflow-hidden overflow-y-auto text-slate-500">
+                {mlproject.description.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </p>
             </div>
           </div>
         ))}
