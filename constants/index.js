@@ -38,7 +38,7 @@ import {
   python,
   vuejs,
   threejs,
-  sql,
+  postgresql,
   docker,
   adobe,
   blender,
@@ -65,9 +65,29 @@ import {
   aws_rds,
   aws_elastic_beanstalk,
   aws_sagemaker,
+  pandas,
+  numpy,
+  matplotlib,
 } from "../assets/icons";
+import { name } from "file-loader";
 
 export const skills = [
+  {
+    imageUrl: numpy,
+    name: "NumPy",
+    type: "Core",
+  },
+  {
+    imageUrl: pandas,
+    name: "Pandas",
+    type: "Core",
+  },
+  {
+    imageUrl: matplotlib,
+    name: "Matplotlib",
+    type: "Core",
+  },
+
   {
     imageUrl: scikit_learn,
     name: "Scikit-Learn",
@@ -214,8 +234,8 @@ export const skills = [
     type: "Tools",
   },
   {
-    imageUrl: sql,
-    name: "SQL",
+    imageUrl: postgresql,
+    name: "PostgreSQL",
     type: "Database",
   },
 
@@ -250,21 +270,13 @@ export const skills = [
     name: "Tailwind CSS",
     type: "Frontend",
   },
-  {
-    imageUrl: aws,
-    name: "Amazon Web Services",
-    type: "Tools",
-  },
+
   {
     imageUrl: typescript,
     name: "TypeScript",
     type: "Language",
   },
-  {
-    imageUrl: pytorch,
-    name: "PyTorch",
-    type: "Tools",
-  },
+
   {
     imageUrl: docker,
     name: "Docker",

@@ -30,9 +30,9 @@ import soundon from "./soundon.png";
 import soundoff from "./soundoff.png";
 import python from "./python.png";
 import adobe from "./adobe.png";
-import blender from "./blender.png";
+import blender from "./blender.svg";
 import docker from "./docker.png";
-import sql from "./sql.png";
+import postgresql from "./postgres.svg";
 import hashnnode from "./hashnnode.svg";
 import pytorch from "./pytorch.svg";
 import gdsc from "./gdsc.svg";
@@ -59,8 +59,13 @@ import aws_s3 from "./aws-s3.svg";
 import aws_rds from "./aws-rds.svg";
 import aws_elastic_beanstalk from "./aws-elastic-beanstalk.svg";
 import aws_sagemaker from "./aws-sagemaker.svg";
-
+import numpy from "./numpy.svg";
+import pandas from "./pandas.svg";
+import matplotlib from "./matplotlib.svg";
 export {
+  matplotlib,
+  numpy,
+  pandas,
   aws_ec2,
   aws_s3,
   aws_rds,
@@ -89,7 +94,7 @@ export {
   adobe,
   blender,
   docker,
-  sql,
+  postgresql,
   css,
   express,
   git,

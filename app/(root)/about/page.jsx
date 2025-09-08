@@ -47,7 +47,27 @@ const page = () => {
       <div className="py-10 flex flex-col">
         <h2 className="subhead-text">My Skills</h2>
 
-        <h3 className="subtitle-text text-center pt-8 orange-gradient_text">
+        <h3 className="text-xl font-semibold text-slate-900 mt-6">
+          Programming Languages
+        </h3>
+        <div className="mt-6 flex justify-center flex-wrap gap-12">
+          {languages.map((skill, index) => (
+            <div
+              className="flex flex-col justify-center items-center gap-x-6 m-5"
+              key={skill.imageUrl}
+            >
+              <Image
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={100}
+                height={100}
+              />
+              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="subhead-text text-center my-8 orange-gradient_text">
           Machine Learning & Deep Learning
         </h3>
 
@@ -131,7 +151,7 @@ const page = () => {
           ))}
         </div>
 
-        <h3 className="subtitle-text text-center pt-8 green-gradient_text">
+        <h3 className="subhead-text text-center my-8 green-gradient_text">
           Web Development
         </h3>
         <h3 className="text-xl font-semibold text-slate-900 mt-6">
@@ -175,26 +195,6 @@ const page = () => {
         </h3>
         <div className="mt-6 flex justify-center flex-wrap gap-12">
           {backend.map((skill, index) => (
-            <div
-              className="flex flex-col justify-center items-center gap-x-6 m-5"
-              key={skill.imageUrl}
-            >
-              <Image
-                src={skill.imageUrl}
-                alt={skill.name}
-                width={100}
-                height={100}
-              />
-              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="text-xl font-semibold text-slate-900 mt-6">
-          Programming Languages
-        </h3>
-        <div className="mt-6 flex justify-center flex-wrap gap-12">
-          {languages.map((skill, index) => (
             <div
               className="flex flex-col justify-center items-center gap-x-6 m-5"
               key={skill.imageUrl}
