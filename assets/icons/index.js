@@ -62,7 +62,9 @@ import aws_sagemaker from "./aws-sagemaker.svg";
 import numpy from "./numpy.svg";
 import pandas from "./pandas.svg";
 import matplotlib from "./matplotlib.svg";
+import github_actions from "./github_actions.svg";
 export {
+  github_actions,
   matplotlib,
   numpy,
   pandas,

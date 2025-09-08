@@ -67,6 +67,7 @@ import {
   aws_sagemaker,
   pandas,
   numpy,
+  github_actions,
   matplotlib,
 } from "../assets/icons";
 import { name } from "file-loader";
@@ -233,6 +234,12 @@ export const skills = [
     name: "GitHub",
     type: "Tools",
   },
+  {
+    imageUrl: github_actions,
+    name: "GitHub Actions",
+    type: "Tools",
+  },
+
   {
     imageUrl: postgresql,
     name: "PostgreSQL",
