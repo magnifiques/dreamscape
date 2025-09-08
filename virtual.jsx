@@ -1,6 +1,12 @@
 // // components/Chatbot.js
 // "use client"; // Required for client-side components in Next.js App Router
+import React from "react";
 
+const page = () => {
+  return <div>page</div>;
+};
+
+export default page;
 // import { useState, useEffect } from "react";
 // import { Client } from "@gradio/client";
 
