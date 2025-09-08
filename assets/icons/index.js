@@ -45,7 +45,7 @@ import webdev from "./webdev.png";
 import mlearning from "./ml.png";
 import uofgr from "./uofgr.jpg";
 import scikit_learn from "./scikit-learn.svg";
-import tensorflow from "./TensorFlow.svg";
+import tensorflow from "./Tensorflow.svg";
 import keras from "./Keras.svg";
 import huggingface from "./hugging face.svg";
 import openai from "./openai.svg";
