@@ -13,10 +13,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const links = [
-    // {
-    //   href: "/virtual",
-    //   name: "Virtual",
-    // },
+    {
+      href: "/virtual",
+      name: "Virtual",
+    },
 
     {
       href: "/projects",

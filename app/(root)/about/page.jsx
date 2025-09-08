@@ -40,8 +40,8 @@ const page = () => {
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p className="">
           AI Engineer based in Canada, specializing in Large Language Models,
-          Agentic AI, and MLOps, specializing building Full Stack Web
-          Applications
+          Agentic AI, and MLOps. Previously worked developing Full Stack Web
+          Applications.
         </p>
       </div>
       <div className="py-10 flex flex-col">
