@@ -16,12 +16,19 @@ const page = () => {
     triggerOnce: true,
   });
 
+  const core = skills.filter((skill) => skill.type === "Core");
+  const agents = skills.filter((skill) => skill.type === "Agentic AI");
+  const orchestration = skills.filter(
+    (skill) => skill.type === "Orchestration"
+  );
+  const cloud = skills.filter((skill) => skill.type === "Cloud");
+
   const frontEnd = skills.filter((skill) => skill.type === "Frontend");
   const backend = skills.filter((skill) => skill.type === "Backend");
   const languages = skills.filter((skill) => skill.type === "Language");
   const databases = skills.filter((skill) => skill.type === "Database");
   const tools = skills.filter((skill) => skill.type === "Tools");
-
+  orchestration;
   return (
     <section className="max-container">
       <h1 className="head-text">
@@ -32,12 +39,101 @@ const page = () => {
       </h1>
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p className="">
-          Software Engineer based in Canada, specializing in building Full Stack
-          Web Applications and Machine Learning Models
+          AI Engineer based in Canada, specializing in Large Language Models,
+          Agentic AI, and MLOps, specializing building Full Stack Web
+          Applications
         </p>
       </div>
       <div className="py-10 flex flex-col">
-        <h3 className="subhead-text">My Skills</h3>
+        <h2 className="subhead-text">My Skills</h2>
+
+        <h3 className="subtitle-text text-center pt-8 orange-gradient_text">
+          Machine Learning & Deep Learning
+        </h3>
+
+        <h3 className="text-xl font-semibold text-slate-900 mt-12">
+          Core Machine Learning / Deep Learning / LLM Frameworks
+        </h3>
+        <div className="mt-6 flex justify-center flex-wrap gap-12">
+          {core.map((skill, index) => (
+            <div
+              className="flex flex-col justify-center items-center gap-x-6 m-5"
+              key={skill.imageUrl}
+            >
+              <Image
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={100}
+                height={100}
+              />
+              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold text-slate-900 mt-12">
+          Agentic AI
+        </h3>
+        <div className="mt-6 flex justify-center flex-wrap gap-12">
+          {agents.map((skill, index) => (
+            <div
+              className="flex flex-col justify-center items-center gap-x-6 m-5"
+              key={skill.imageUrl}
+            >
+              <Image
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={100}
+                height={100}
+              />
+              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold text-slate-900 mt-12">
+          Experiment Tracking & Orchestration
+        </h3>
+        <div className="mt-6 flex justify-center flex-wrap gap-12">
+          {orchestration.map((skill, index) => (
+            <div
+              className="flex flex-col justify-center items-center gap-x-6 m-5"
+              key={skill.imageUrl}
+            >
+              <Image
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={100}
+                height={100}
+              />
+              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold text-slate-900 mt-12">
+          Cloud Services
+        </h3>
+        <div className="mt-6 flex justify-center flex-wrap gap-12">
+          {cloud.map((skill, index) => (
+            <div
+              className="flex flex-col justify-center items-center gap-x-6 m-5"
+              key={skill.imageUrl}
+            >
+              <Image
+                src={skill.imageUrl}
+                alt={skill.name}
+                width={100}
+                height={100}
+              />
+              <p className="pt-6 text-slate-700 font-poppins ">{skill.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="subtitle-text text-center pt-8 green-gradient_text">
+          Web Development
+        </h3>
         <h3 className="text-xl font-semibold text-slate-900 mt-6">
           Frontend Technologies
         </h3>
@@ -155,12 +251,17 @@ const page = () => {
         <h3 className="subhead-text">Technical Experience</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p className="">
-            I use Next.JS and JavaScript to bring ideas to life. Most of my
+            I use Python and PyTorch to build intelligent AI systems that solve
+            real-world problems. My expertise spans Large Language Models,
+            agentic AI, and MLOps pipelines. I specialize in fine-tuning
+            transformers, building RAG systems, and deploying scalable AI
+            solutions using AWS and Hugging Face.
+            {/* I use Next.JS and JavaScript to bring ideas to life. Most of my
             projects highlight my skills with Next.JS. For backend work, I use
             Node.js and Express.js, and I design user-friendly interfaces with
             Figma. I’m focused on delivering high-quality solutions that exceed
             expectations. Let&apos;s work together to turn your ideas into
-            amazing digital experiences!
+            amazing digital experiences! */}
           </p>
           <div className="mt-12 flex" ref={ref}>
             <VerticalTimeline lineColor="#e4e4e7">

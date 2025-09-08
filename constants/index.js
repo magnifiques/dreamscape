@@ -1,4 +1,3 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
   vampfire,
   blogStash,
@@ -51,9 +50,104 @@ import {
   aws,
   webdev,
   uofgr,
+  keras,
+  tensorflow,
+  scikit_learn,
+  huggingface,
+  openai,
+  crewai,
+  langchain,
+  autogen,
+  mlflow,
+  airflow,
+  aws_ec2,
+  aws_s3,
+  aws_rds,
+  aws_elastic_beanstalk,
+  aws_sagemaker,
 } from "../assets/icons";
 
 export const skills = [
+  {
+    imageUrl: scikit_learn,
+    name: "Scikit-Learn",
+    type: "Core",
+  },
+  {
+    imageUrl: pytorch,
+    name: "PyTorch",
+    type: "Core",
+  },
+  {
+    imageUrl: tensorflow,
+    name: "TensorFlow",
+    type: "Core",
+  },
+  {
+    imageUrl: keras,
+    name: "Keras",
+    type: "Core",
+  },
+  {
+    imageUrl: huggingface,
+    name: "Transformers",
+    type: "Core",
+  },
+  {
+    imageUrl: openai,
+    name: "OpenAI Agents SDK",
+    type: "Agentic AI",
+  },
+  {
+    imageUrl: crewai,
+    name: "CrewAI",
+    type: "Agentic AI",
+  },
+  {
+    imageUrl: langchain,
+    name: "LangChain",
+    type: "Agentic AI",
+  },
+  {
+    imageUrl: autogen,
+    name: "AutoGen",
+    type: "Agentic AI",
+  },
+  {
+    imageUrl: mlflow,
+    name: "MLFlow",
+    type: "Orchestration",
+  },
+  {
+    imageUrl: airflow,
+    name: "Apache Airflow",
+    type: "Orchestration",
+  },
+  {
+    imageUrl: aws_s3,
+    name: "AWS S3",
+    type: "Cloud",
+  },
+  {
+    imageUrl: aws_rds,
+    name: "AWS RDS",
+    type: "Cloud",
+  },
+  {
+    imageUrl: aws_elastic_beanstalk,
+    name: "AWS Beanstalk",
+    type: "Cloud",
+  },
+  {
+    imageUrl: aws_sagemaker,
+    name: "AWS Sagemaker",
+    type: "Cloud",
+  },
+  {
+    imageUrl: aws_ec2,
+    name: "AWS EC2",
+    type: "Cloud",
+  },
   {
     imageUrl: html,
     name: "HTML",
@@ -403,6 +497,20 @@ export const projects = [
 ];
 
 export const mlprojects = [
+  {
+    name: "NASA APOD ETL Pipeline",
+    description: `- Built a scalable ETL pipeline using Apache Airflow to extract, transform, and load astronomy data from NASA's Astronomy Picture of the Day (APOD) API into a PostgreSQL database with automated daily scheduling.
+    \n - Designed and implemented a robust DAG (Directed Acyclic Graph) workflow using Airflow's TaskFlow API, SimpleHttpOperator, and PostgresHook to orchestrate sequential data processing tasks with proper dependency management.
+    \n - Containerized Airflow infrastructure using Docker while leveraging Amazon RDS for managed PostgreSQL hosting, combining local development flexibility with cloud-based database scalability and reliability.
+    \n - Integrated data transformation logic to process JSON API responses, extracting and validating key fields (title, explanation, URL, date) before loading into structured database tables with automated schema creation.
+    \n - Implemented error handling and monitoring capabilities through Airflow's built-in logging and alerting system, enabling reliable pipeline execution and easy troubleshooting of data workflows.
+    `,
+    theme: "btn-back-brown",
+    // image: FoodVision,
+    source_code_link:
+      "https://huggingface.co/spaces/vapit/foodvision_extended/tree/main",
+    website_link: "https://cmf2vq6qm2qx501p5bkg1x4ds.astronomer.run/d3us5jnj/",
+  },
   {
     name: "Foodvision",
     description: `- Built a food classification model using PyTorch and the Vision Transformer (ViT) architecture, utilizing PyTorch’s

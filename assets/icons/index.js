@@ -44,7 +44,38 @@ import aws from "./aws.png";
 import webdev from "./webdev.png";
 import mlearning from "./ml.png";
 import uofgr from "./uofgr.jpg";
+import scikit_learn from "./scikit-learn.svg";
+import tensorflow from "./TensorFlow.svg";
+import keras from "./Keras.svg";
+import huggingface from "./hugging face.svg";
+import openai from "./openai.svg";
+import crewai from "./crewai.svg";
+import langchain from "./langchain.svg";
+import autogen from "./autogen.svg";
+import mlflow from "./mlflow.svg";
+import airflow from "./airflow.svg";
+import aws_ec2 from "./aws-ec2.svg";
+import aws_s3 from "./aws-s3.svg";
+import aws_rds from "./aws-rds.svg";
+import aws_elastic_beanstalk from "./aws-elastic-beanstalk.svg";
+import aws_sagemaker from "./aws-sagemaker.svg";
+
 export {
+  aws_ec2,
+  aws_s3,
+  aws_rds,
+  aws_elastic_beanstalk,
+  aws_sagemaker,
+  mlflow,
+  airflow,
+  openai,
+  crewai,
+  langchain,
+  autogen,
+  huggingface,
+  tensorflow,
+  keras,
+  scikit_learn,
   uofgr,
   webdev,
   mlearning,

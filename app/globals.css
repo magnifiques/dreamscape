@@ -32,8 +32,20 @@ body:has(.card[data-color="green"]:hover) {
     @apply font-semibold sm:text-3xl text-xl relative font-poppins;
   }
 
+  .subtitle-text {
+    @apply font-semibold sm:text-2xl text-lg relative font-poppins;
+  }
+
   .blue-gradient_text {
     @apply bg-gradient-to-r from-[#430A5D] to-[#6420AA] bg-clip-text text-transparent;
+  }
+
+  .orange-gradient_text {
+    @apply bg-gradient-to-r from-[#D5451B] to-[#EA2F14] bg-clip-text text-transparent;
+  }
+
+  .green-gradient_text {
+    @apply bg-gradient-to-r from-[#386641] to-[#4A9782] bg-clip-text text-transparent;
   }
 
   .input {
@@ -118,6 +130,10 @@ body:has(.card[data-color="green"]:hover) {
 
 .block-container .btn-back-red {
   background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
+}
+
+.block-container .btn-back-brown {
+  background: linear-gradient(135deg, #644a07 -20%, #594100 120%);
 }
 
 .block-container .btn-back-green {
