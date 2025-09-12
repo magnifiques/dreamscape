@@ -134,7 +134,7 @@ const Page = () => {
 
         {/* Input Area */}
         <div className="glassmorphism p-6 rounded-lg">
-          <div className="flex gap-4">
+          <div className="grid grid-cols-5 items-center gap-2 md:gap-4">
             <input
               type="text"
               value={inputMessage}
@@ -143,16 +143,16 @@ const Page = () => {
                 e.key === "Enter" && !isLoading && handleSendMessage()
               }
               placeholder="Type your message here..."
-              className="input flex-1"
+              className="bg-white border border-gray-200 text-gray-900 text-xs md:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full font-normal shadow-card p-2 col-span-4 md:col-span-4  sm:col-start-auto"
               disabled={isLoading}
             />
             <button
               onClick={handleSendMessage}
               disabled={isLoading || !inputMessage.trim()}
-              className="btn disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 transition-all duration-250 hover:shadow-lg"
+              className="btn disabled:opacity-50 disabled:cursor-not-allowed flex-row items-center gap-x-2 transition-all duration-250 hover:shadow-lg"
             >
               <Send className="w-4 h-4" />
-              Send
+              <span className="hidden sm:block">Send</span>
             </button>
           </div>
         </div>
